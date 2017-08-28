@@ -1,0 +1,10 @@
+# Interface
+enable-mouse = yes
+
+# Display
+hide-cursor = 10
+list-format = [[[%artist% - ]%album% - ]%title%]|%file%
+visible-bitrate = yes
+
+# Colors
+enable-colors = yes

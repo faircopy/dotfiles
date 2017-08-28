@@ -1,0 +1,12 @@
+"amixer -q -c0 sset Master 2%+"
+	XF86AudioRaiseVolume
+"amixer -q -c0 sset Master 2%-"
+	XF86AudioLowerVolume
+"amixer -q -c0 sset Master toggle"
+	XF86AudioMute
+"mpc -q toggle"
+	XF86AudioPlay
+"mpc -q next"
+	Pause
+"urxvtc -e python"
+	XF86Calculator
