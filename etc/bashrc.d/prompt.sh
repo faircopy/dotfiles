@@ -11,7 +11,7 @@ __prompt_command() {
 	fi
 
 	if [ "$exit_code" -ne 0 ]; then
-		exit="\[\033[1;31m${exit_code}\[\033[0m "
+		exit="\[\033[1;31m\]${exit_code}\[\033[0m\] "
 	fi
 
 	user="${user_color}\u\[\033[0m\]"
