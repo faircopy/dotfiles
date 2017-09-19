@@ -32,6 +32,8 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_bufsettings = 'number relativenumber'
 
+set pastetoggle=<F3>
+
 " F12 toggles display of non-printing characters
 nnoremap <F12> :set invlist<CR>
 
