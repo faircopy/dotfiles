@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 get_os() {
-	local -r os="$(sed -n 's,^NAME=\(.*\),\1,p' /etc/os-release)"
+	local -r os="$(sed -n 's,^NAME=['\'\"']\(.*\)['\'\"'],\1,p' /etc/os-release)"
 
 	if [ -z "$os" ]; then
 		echo >&2 "Error: OS type not found"
@@ -31,7 +31,7 @@ configure() {
 				['etc/bashrc.d/prompt.sh']='/etc/bash/bashrc.d/prompt.sh'
 			)
 			;;
-		'Fedora'|'Ubuntu'|'LinuxMint')
+		'Fedora'|'Ubuntu'|'Linux Mint')
 			CONF_ROOT+=(
 				['etc/bashrc.d/aliases.sh']='/etc/profile.d/Z99-aliases.sh'
 				['etc/bashrc.d/env.sh']='/etc/profile.d/Z99-env.sh'
@@ -40,7 +40,7 @@ configure() {
 			)
 			;;
 		*)
-			echo >&2 'Error: OS unknown'
+			echo >&2 "Error: OS '$OS' unknown"
 			exit 1
 			;;
 	esac
